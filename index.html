@@ -108,8 +108,8 @@
 
         var imgInfo = context.getImageData(0,0,600,500);
         for(var i = 0; i < imgInfo.length; i += 4) {
-           imageData[i] = 0;
-          imageData[i + 1] = 0;
+           imgInfo[i] = 0;
+          imgInfo[i + 1] = 0;
        }
          canvas2.width=canvas2.width;
          context2.putImageData(imgInfo,0,0);
