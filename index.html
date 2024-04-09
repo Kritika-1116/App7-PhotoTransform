@@ -103,16 +103,16 @@
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
            
-        var canvas2 = document.getElementById('myCanvas2');
-        var context2 = canvas2.getContext("2d");
+        var canvas2 = document.getElementById('myCanvas2'); //creates variable for second canvas
+        var context2 = canvas2.getContext("2d"); //creates a 2d border around the second canvas
 
-        var imgInfo = context.getImageData(0,0,600,500);
-        for(var i = 0; i < imgInfo.length; i += 4) {
+        var imgInfo = context.getImageData(0,0,600,500); //creates variable to get image 
+        for(var i = 0; i < imgInfo.length; i += 4) { //function that iterates until the length of the image and addes one to imgInfo everytime
            imgInfo[i] = 0;
           imgInfo[i + 1] = 0;
        }
-         canvas2.width=canvas2.width;
-         context2.putImageData(imgInfo,0,0);
+         canvas2.width=canvas2.width; //cleares canvas
+         context2.putImageData(imgInfo,0,0); //replaces with image
           
         } // end of img.onload
         
@@ -141,24 +141,24 @@
         Press orange button to create or choose image file:
         <input type="file" id="fileInput" STYLE="background-color: #FF6600;">
       </div>
-      <div id="messageDisplayArea"></div>
+      <div id="messageDisplayArea"></div> 
       
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
 
      
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-       var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20);
+      <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas" */
+       var canvas = document.getElementById('myCanvas'); //creates canvas id
+        var context = canvas.getContext("2d"); //clarifies that it is 2d
+        context.font = '20pt Calibri'; //font of text
+        context.fillStyle = "black";//color of text
+        context.fillText("Original image will go here", 10, 20); //clarifies the place where the original image goes 
 
-        var canvas2 = document.getElementById('myCanvas2');
-        var context2 = canvas2.getContext("2d");
-        context2.font = '20pt Calibri';
-        context2.fillStyle = "black";
-        context2.fillText("Blue image will go here", 10, 20);
+        var canvas2 = document.getElementById('myCanvas2'); //get id for canvas
+        var context2 = canvas2.getContext("2d"); //clarifies that it is 2d
+        context2.font = '20pt Calibri'; //font of text
+        context2.fillStyle = "black";//color of text
+        context2.fillText("Blue image will go here", 10, 20); //clarifies the place where the modified image goes
       </script>
 
     </div><!-- /content -->
